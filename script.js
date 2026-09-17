@@ -89,8 +89,14 @@ function initServiceFilter() {
   const noResults = document.getElementById("no-results");
   const resultNote = document.getElementById("filter-result-note");
 
+  // Restore whatever category the visitor last picked, so a refresh
+  // keeps their filter instead of resetting to "All Classes".
+  const savedCategory = localStorage.getItem("selectedServiceCategory");
+
+  // A link from the nav dropdown (services.html?category=kids) is a
+  // deliberate choice and takes priority over the remembered one.
   const params = new URLSearchParams(window.location.search);
-  const initialCategory = params.get("category");
+  const initialCategory = params.get("category") || savedCategory;
   if (initialCategory && [...categorySelect.options].some((opt) => opt.value === initialCategory)) {
     categorySelect.value = initialCategory;
   }
@@ -98,6 +104,9 @@ function initServiceFilter() {
   function filterClasses() {
     const selected = categorySelect.value;
     let visibleCount = 0;
+
+    // Remember this choice for next time.
+    localStorage.setItem("selectedServiceCategory", selected);
 
     cards.forEach((card) => {
       const category = card.getAttribute("data-category");
