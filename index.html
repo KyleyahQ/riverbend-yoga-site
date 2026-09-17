@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riverbend Yoga Studio - Home</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<h1>Riverbend Yoga Studio</h1>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li class="has-dropdown">
+<a href="services.html">Services</a>
+<ul class="dropdown-menu">
+<li><a href="services.html?category=gentle">Gentle</a></li>
+<li><a href="services.html?category=vinyasa">Vinyasa</a></li>
+<li><a href="services.html?category=restorative">Restorative</a></li>
+<li><a href="services.html?category=prenatal">Prenatal</a></li>
+<li><a href="services.html?category=kids">Kids</a></li>
+</ul>
+</li>
+<li><a href="about.html">About</a></li>
+<li><a href="events.html">Events</a></li>
+</ul>
+</nav>
+</header>
+<div class="hero-banner">
+<div class="hero-banner-overlay">
+<h2>Welcome to Riverbend</h2>
+<p>A calm, judgment-free space to breathe, move, and reconnect.</p>
+</div>
+</div>
+
+<main>
+<section>
+<h2>Studio Mission</h2>
+<p>At Riverbend Yoga Studio, our mission is to cultivate a calm, inclusive, and supportive environment where every individual can explore mindful movement and inner peace.</p>
+</section>
+<section>
+<h2>Beginner Reassurance</h2>
+<p>Never stepped onto a mat before? You are welcome here. Our classes are designed to meet you exactly where you are, with zero judgment and total support for all fitness levels.</p>
+</section>
+<section>
+<h2>Featured Class: Gentle Flow</h2>
+<p>Ease tension and restore mobility with our signature weekly gentle flow class, perfect for unwinding after a long day.</p>
+<picture>
+<source media="(min-width: 800px)" srcset="yoga-feature-large.jpg">
+<img src="yoga-feature-small.jpg" alt="A serene practitioner demonstrating a gentle seated yoga stretch.">
+</picture>
+</section>
+<section>
+<h2>Schedule Overview</h2>
+<p>We offer flexible morning, evening, and weekend classes tailored to fit your lifestyle. Check out our services page for a full overview of class types.</p>
+</section>
+<section class="class-selector">
+<h3>Choose Your Practice</h3>
+<button type="button" onclick="selectClassStyle('restorative')">Restorative Flow</button>
+<button type="button" onclick="selectClassStyle('vinyasa')">Vinyasa Grounding</button>
+<button type="button" onclick="selectClassStyle('hatha')">Hatha Alignment</button>
+<div id="selected-preference-display"></div>
+</section>
+<section class="registration-section">
+<h3>Sign Up for a Class</h3>
+<div id="form-status" class="form-status" role="alert"></div>
+<form id="registration-form" novalidate>
+<label for="user-name">Name:</label>
+<input type="text" id="user-name" name="name" autocomplete="name">
+<span id="name-error" class="field-error"></span>
+
+<label for="user-email">Email:</label>
+<input type="text" id="user-email" name="email" autocomplete="email">
+<span id="email-error" class="field-error"></span>
+
+<button type="submit">Submit Registration</button>
+</form>
+</section>
+</main>
+<footer>
+<p>&copy; 2026 Riverbend Yoga Studio. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
