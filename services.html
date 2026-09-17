@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riverbend Yoga Studio - Services</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<h1>Our Classes &amp; Offerings</h1>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li class="has-dropdown">
+<a href="services.html">Services</a>
+<ul class="dropdown-menu">
+<li><a href="services.html?category=gentle">Gentle</a></li>
+<li><a href="services.html?category=vinyasa">Vinyasa</a></li>
+<li><a href="services.html?category=restorative">Restorative</a></li>
+<li><a href="services.html?category=prenatal">Prenatal</a></li>
+<li><a href="services.html?category=kids">Kids</a></li>
+</ul>
+</li>
+<li><a href="about.html">About</a></li>
+<li><a href="events.html">Events</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section>
+<h2>Class Types</h2>
+
+<div class="filter-bar">
+<label for="category-select">Filter by category:</label>
+<select id="category-select">
+<option value="all">All Classes</option>
+<option value="gentle">Gentle</option>
+<option value="vinyasa">Vinyasa</option>
+<option value="restorative">Restorative</option>
+<option value="power">Power &amp; Advanced</option>
+<option value="prenatal">Prenatal</option>
+<option value="kids">Kids</option>
+</select>
+<button type="button" id="filter-btn" class="btn">Filter</button>
+</div>
+<p class="filter-result-note" id="filter-result-note"></p>
+
+<div class="class-grid" id="class-grid">
+
+<div class="class-card" data-category="gentle">
+<span class="tag">Gentle</span>
+<h3>Gentle Yoga</h3>
+<p>Slow-paced movements focused on joint mobility and deep relaxation.</p>
+</div>
+
+<div class="class-card" data-category="vinyasa">
+<span class="tag">Vinyasa</span>
+<h3>Vinyasa Flow</h3>
+<p>Breath-synchronized movement to build mindful strength and flexibility.</p>
+</div>
+
+<div class="class-card" data-category="restorative">
+<span class="tag">Restorative</span>
+<h3>Restorative Yoga</h3>
+<p>Deeply relaxing floor postures supported by props for profound rest.</p>
+</div>
+
+<div class="class-card" data-category="power">
+<span class="tag">Advanced</span>
+<h3>Power Yoga</h3>
+<p>A fast-paced, athletic practice that builds heat, strength, and stamina.</p>
+</div>
+
+<div class="class-card" data-category="power">
+<span class="tag">Advanced</span>
+<h3>Hot Yoga</h3>
+<p>A
